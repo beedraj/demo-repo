@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .k { 
+            height: 500px;
+            width: 500px;
+            padding-top: 10px ;
+            margin:10px 300px;
+            background-color: rgb(182, 204, 204);
+            text-align: center;
+           
+            
+        }
+        .l { 
+            height: 200px;
+            width: 200px;
+            padding-top: 10px ;
+            margin:10px 200px;
+            background-color: rgb(179, 185, 185);
+            text-align: center;
+           
+            
+        }
+    </style>
+
+<script  >  
+    function validate(){  
+    let name=document.forms["f1"]["name"].value;  
+    let email=document.forms["f1"]["email"].value;
+    let phone=document.forms["f1"]["phone"].value; 
+    let gender=document.forms["f1"]["gender"].value;
+    let state1=document.forms["f1"]["state"].value;
+    let special1=document.forms["f1"]["special"].checked;
+    let special3=document.forms["f1"]["special2"].checked;
+      
+    if(name==""){  
+    document.getElementById("namelocation").innerHTML=  
+    " Please enter your name";  
+    return false;
+    }else{  
+    document.getElementById("namelocation").innerHTML="";  
+    
+    }  
+    
+    if(email==""){  
+    document.getElementById("passwordlocation").innerHTML=  
+    "  email should be valid ";  
+    return false; 
+    }else{  
+    document.getElementById("passwordlocation").innerHTML=" ";  
+    } 
+    if (phone== ""){
+    document.getElementById("phonelocation").innerHTML="Enter Numeric value only";
+    return  false;
+    }else{
+        document.getElementById("phonelocation").innerHTML=" ";
+    }
+    if (gender== ""){
+    document.getElementById("location").innerHTML="Enter your gender";
+    return  false;
+    }else{
+        document.getElementById("location").innerHTML=" ";
+    }
+    if (state1== ""){
+    document.getElementById("st").innerHTML="Enter your state";
+    return  false;
+    }else{
+        document.getElementById("st").innerHTML="";
+    }
+    
+    
+    if (special1 || special3){
+document.getElementById("sp").innerHTML="";
+    
+    }else{
+        
+   document.getElementById("sp").innerHTML="choose your specialization";
+    return  false;
+    }
+}
+    
+    
+      
+     
+</script>  
+ <body  >
+    
+    <!-- <div class="k"> -->
+    <form  name="f1"   action="submit-form.html" onsubmit="return validate()" method="post" class="k"> 
+        <h1>Registration Form</h1> 
+        <table ></table>
+            <tr><td>Name:</td>
+            <td><input type="text" name="name"/>  
+            <span id="namelocation" style="color:red"></span></td></tr> <br><br>
+            <tr><td>Email:</td><td>
+            <td><input type="text" name="email"/>  
+            <span id="passwordlocation" style="color:red"></span></td></tr><br><br>
+            <tr><td>Phone:</td>
+            <td><input type="number" name="phone"/>  
+            <span id="phonelocation" style="color:red"></span></td></tr><br><br>
+            <tr><td>Gender:</td>
+            <td><input type="radio" name ="gender" value="male">male
+            <input type="radio" name="gender" value="male">female
+            <span id="location" style="color:red"></span></td></tr></td></tr><br><br>
+            <tr><td>State:</td><td>
+                <select id="state" >
+                    <option value="" > Please Select State</option>
+                    <option value="1">Panjab</option>
+                    <option value="2">Delhi</option>
+                    <option value="3">Chandigarh</option>
+                    <option value="4">UP</option>
+                    
+                </select></td></tr>
+                <span id="st"  style="color:red" ></span><br><br>
+                <tr><td>Specialization:</td><br>
+                <input type="checkbox" name="special"> AI<br>
+                 <input type="checkbox" name="special2"> Cybersecurity<br>
+                 <span id="sp" style="color: red;"></span></tr><br><br>
+                
+                
+            <tr><td ><input type="submit" value="submit" padding-left="20px"  style="color:blue"/>  </td></tr>
+        </table>
+</form> 
+ 
+                <!--Overriding  -->
+                <div class="l">
+                <h1 style="color: red;">Overriding</h1>   
+                 <script>
+                 class student
+                {
+                  constructor(name)
+                  {
+                    this.college="GIET";
+                  }
+                }
+                class university extends student {
+                  constructor(name,rollno) {
+                   super();
+                    this.name=name;
+                    this.rollno=rollno;
+                  } 
+                }
+                var v = new university("Bedraj","cst128");
+                document.writeln(v.college+" "+v.name+" "+v.rollno);
+            </script>
+        </div>
+
+        <!--     Try and catch--> 
+        <div>
+            <h1 style="color: red;">Try and Catch</h1>
+            <h2 id="demo" style="color: blue;"> Reference error</h2>
+            <script>
+            let x = 5;
+            try {
+            x = y + 1;
+            }
+            catch(err) {
+            document.getElementById("demo").innerHTML = err.name;
+            }
+            </script>
+            </div>
+
+            <!--     Prime number--> 
+                    <div >
+                        <h1 style="color: red;">check prime number</h1>
+                        <input type="number" id="num">
+                        <p id="check"></p>
+                        <input type="submit" value="SUBMIT" onclick="prime()">
+                        <script>
+
+                            function prime(){
+                                let number = document.getElementById("num").value;
+                                    if(number==1 ){
+                                        document.getElementById("check").innerHTML = "Neither prime nor composite";
+                                    }
+                                    else if(number>1){
+                                        for(let i=2; i<number;i++){
+                                            if(number %i!==0){
+                                                document.getElementById("check").innerHTML =  " It is  a prime number";
+                                                break;
+                                            }
+                                            else{
+                                                document.getElementById("check").innerHTML = "It is not a prime number";
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    else{
+                                        alert("enter Positive number")
+                                    }
+                            }
+                        </script>
+
+
+                    </div>
+
+                    <!-- inheritance-->
+            <div >
+                <h1 style="color: red;">Inheritance</h1>
+                <p id="int"></p>
+                
+                <script>
+                class Person {
+                constructor(name) {
+                    this.personname = name;
+                }
+                present() {
+                    return 'My name is'   + this.personname;
+                }
+                }
+                
+                class Country extends Person {
+                constructor(name, con) {
+                    super(name);
+                    this.country = con;
+                }
+                show() {
+                    return this.present() + ', I am from ' + this.country;
+                }
+                }
+                
+                let myPerson = new Country("Bedraj", "Nepal");
+                document.getElementById("int").innerHTML = myPerson.show();
+                </script>
+                </div>
+
+                <!--static  keywords -->
+<div>
+    <h2 style="color:blueviolet">Static Keyword</h2>
+    <p id="hel"></p>
+    <script>
+    class Person{
+      constructor(name) {
+        this.personname = name;
+      }
+      static hello() {  
+        return "Hello!!";
+      }
+    }
+    
+    myperson= new Person("Bedraj");
+    
+    
+    document.getElementById("hel").innerHTML = Person.hello();
+    
+
+    
+    </script>
+    </div>
+
+
+
+    <!--super keywords -->
+    <div>
+    <h1 style="color: red;">Super keyword</h1>
+    <p id="emp"></p>
+    
+    <script>
+        
+        
+    class Employee {
+    constructor(name) {
+        this.employeename = name;
+    }
+    present() {
+        return 'My name is '   + this.employeename;
+    }
+    }
+    
+    class Company extends Employee {
+    constructor(name, cop) {
+        super(name);
+        this.company = cop;
+    }
+    show() {
+        return this.present() + ', I am doing intership in ' + this.company;
+    }
+    }
+    
+    let myEmployee = new Company("Bedraj", "orion");
+    document.getElementById("emp").innerHTML = myEmployee.show();
+    
+    
+    </script>
+    
+    </div>
+    
+    
+    
+                    
+         </body>
+</html>    

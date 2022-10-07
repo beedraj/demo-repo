@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web page</title>
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+            <script  >  
+                function validate(){  
+                let name=document.forms["f1"]["name"].value;  
+                let email=document.forms["f1"]["email"].value;
+                let phone=document.forms["f1"]["phone"].value; 
+                let gender=document.forms["f1"]["gender"].value;
+                let state1=document.forms["f1"]["state"].value;
+                let d=document.forms["f1"]["diploma"].checked;
+                let b=document.forms["f1"]["bachelor"].checked;
+                let m=document.forms["f1"]["master"].checked;
+                  
+                if(name==""){  
+                document.getElementById("namelocation").innerHTML=  
+                " Please enter your name";  
+                return false;
+                }else{  
+                document.getElementById("namelocation").innerHTML="";  
+                
+                }  
+                
+                if(email==""){  
+                document.getElementById("passwordlocation").innerHTML=  
+                "  email should be valid ";  
+                return false; 
+                }else{  
+                document.getElementById("passwordlocation").innerHTML=" ";  
+                } 
+                if (phone== ""){
+                document.getElementById("phonelocation").innerHTML="Enter Numeric value only";
+                return  false;
+                }else{
+                    document.getElementById("phonelocation").innerHTML=" ";
+                }
+                if (gender== ""){
+                document.getElementById("location").innerHTML="Enter your gender";
+                return  false;
+                }else{
+                    document.getElementById("location").innerHTML=" ";
+                }
+                if (state1== ""){
+                document.getElementById("st").innerHTML="Enter your state";
+                return  false;
+                }else{
+                    document.getElementById("st").innerHTML="";
+                }
+                
+                
+                if (d || b || m){
+                    document.getElementById("grad").innerHTML="";
+               
+                }else{
+                    document.getElementById("grad").innerHTML="choose your graduation";
+                return  false;
+                }
+                
+                }
+        </script>        
+                
+    </head>
+        <body>
+            <header>
+            <div class="container-fluid  text-bg-warning ">
+                <div class="row">
+            <div class="col-sm-5">
+              
+               0123456789 
+              </i>  
+               </div>
+               <div class="col-sm-5">
+                demo@example.com
+               </div>
+                <div class="col-sm-2  text-bg-success">
+                 <p > Contact  Us</p>
+                   
+                  </div>
+            </div>  
+            </div>
+            </header>
+            <div class="container-fluid  fixed-top">
+              <div class="row">
+               <div class="col-sm-6">
+                <img src="images/log.jpg" width="100" height="100">
+               </div> 
+               <div class="col-sm-6">
+                <p class="text-center"></p>
+                <ul class="nav justify-content-center">
+                  
+                  <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                          HOME
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Homepage Classic</a></li>
+                          <li><a class="dropdown-item" href="#">Homepage box layout</a></li>
+                          
+                        </ul>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                          ABOUT
+                        </button>
+                        
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">
+                          SERVICES
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Service</a></li>
+                          <li><a class="dropdown-item" href="#">Single Services</a></li>
+                          
+                        </ul>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">
+                         PAGES
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">About</a></li>
+                          <li><a class="dropdown-item" href="#">Features</a></li>
+                          <li><a class="dropdown-item" href="#">Blog</a></li>
+                        </ul>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">
+                          BLOG
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Blog Details</a></li>
+                          <li><a class="dropdown-item" href="#">Blog with right sider bar</a></li>
+                          <li><a class="dropdown-item" href="#">Blog with left sider bar</a></li>
+                        </ul>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">
+                          CONTACT
+                        </button>
+                       
+                      </div>
+                  </li>
+                  
+                </ul>
+               </div>
+              </div>
+            </div>
+                
+            </div>
+          
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+                
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/assign-1.jpg"  class="d-block" style="width:100% ;height:500px;">
+                    <div class="carousel-caption">
+                      <h1 style="color:white;">WE ARE EXPERT IN</h1>
+                      <h1 style="color:blue;">BUSINESS CONSULTATION</h1>
+                      <p style="color: red;">Banking comes under tertiary industries These are concerned with providing support services to primary and secondary industries as well as activities relating to trade.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/assign-2.jpg" alt="Chicago" class="d-block" style="width:100% ;height:500px;">
+                    <div class="carousel-caption">
+                        <h1 style="color: BLUE;"> FINANCIAL CONSULTING</h1>
+                        <h1 style="color:white;">EXPERTS</h1>
+                        <p style="color:red;">Banking comes under tertiary industries These are concerned with providing support services to primary and secondary industries as well as activities relating to trade.</p>
+                    </div> 
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/assign-3.jpg" alt="New York" class="d-block" style="width:100% ;height:500px;">
+                    <div class="carousel-caption">
+                        <h3>ARE YOU WORRIED ABOUT YOUR BUSSINESS</h3>
+                        <h1 style="color: white;">WE ARE EXPERT IN</h1>
+                        <h1 style="color:blue;">CONSULTING</h1>
+                        <p style="color: red;">Banking comes under tertiary industries These are concerned with providing support services to primary and secondary industries as well as activities relating to trade.</p>
+                    </div>  
+                  </div>
+                </div>
+                
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3 style="color: blue;">WE ARE FSULTING</h3>
+                        <h2 style="color: red;">BEST FINANCIAL ADVISOR FOR YOUR FUTURE BUSINESS SUCCESS TO GROWUP</h2>
+                        <p>Parchitect beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+                            Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+                            
+                            </p>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                  READ MORE
+                                </button>
+                            </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="images/bed.png" width="=900px" height="450">
+                     </div>
+                        <div class="col-sm-4 text-bg-warning">
+                            <h1 style="color: red; text-align: centetr;">form</h1>
+                            <form  name="f1"  onsubmit="return validate()" method="post" action="submit-form.html" >
+                                    
+                                <div>
+                                    <label for="name"> Name:</label>
+                                        <input type="text" name="name"/>  
+                                        <span id="namelocation" style="color:red"></span>
+                                </div><br>
+                                <div >
+                                   <label for="email"> Email:</label>
+                                        <input type="text" name="email"/>  
+                                        <span id="passwordlocation" style="color:red"></span>
+                                </div><br>
+                                <div >
+                                       <label for="phone">Phone:</label> 
+                                        <input type="number" name="phone"/>  
+                                        <span id="phonelocation" style="color:red"></span>
+                                </div><br>
+                                <div >
+                                    <label for="gender">Gender:</label> 
+                                        <input type="radio" name ="gender" value="male">male
+                                        <input type="radio" name="gender" value="male">female
+                                        <span id="location" style="color:red"></span>
+                                </div><br>
+                                <div >
+                                   <label for="state">State:</label> 
+                                        <select id="state" >
+                                            <option value="" > Please Select State</option>
+                                            <option value="1">Panjab</option>
+                                            <option value="2">Delhi</option>
+                                            <option value="3">Chandigarh</option>
+                                            <option value="4">UP</option>
+                                            
+                                        </select>
+                                        <span id="st"  style="color:red" ></span>
+                                </div><br>
+
+
+                                <div >
+                                    <label for="Graduation">Graduation</label><br>
+                                        <input type="checkbox"   id="dip"  name="diploma">
+                                        <label for="diploma">Diploma</label><br>
+                                        <input type="checkbox"   id="bac"  name="bachelor">
+                                        <label for="bachelor">Bachelor</label><br>
+                                        <input type="checkbox"   id="mas"  name="master">
+                                        <label for="master">Master</label><br>
+                                        <span id="grad" style="color: red;"></span>
+                                    
+                                </div><br>
+                               <input type="submit" value="submit" padding-left="20px"  style="color:blue"/> 
+                                </table>
+
+                                
+                            </form>
+                     </div>
+                </div>
+            </div>
+
+
+
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card" style="width:400px">
+                            <div class="card-body">
+                              <img src="images/download.jpg" width="350" height="200">
+                            <h4 class="card-title">
+                                ENSURE SECURITY</h4>
+                                <p class="card-text">
+                                    
+                                    Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam rem aperiam eaque</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 ">
+                        <div class="card" style="width:400px">
+                            <div class="card-body">
+                              <img src="images/expert.jpg" width="350" height="200">
+                            <h4 class="card-title">
+                                EXPERT TEAM </h4>
+                                <p class="card-text">
+                                   
+                                    Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam rem aperiam eaque</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4" >
+                        <div class="card" style="width:400px">
+                            <div class="card-body">
+                              <img src="images/seven.jpg" width="350" height="200">
+                            <h4 class="card-title">
+                                24/7 LIVE SUPPORT</h4>
+                                <p class="card-text">
+                                    Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam rem aperiam eaque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+                 
+                                    
+        </body>
+        <footer>
+          
+          <div class="text-center p-4 text-bg-warning">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+          </div>
+        </footer>
+</html>

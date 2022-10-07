@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+        <head>
+            <title>Palindrone number</title>
+            
+        </head>
+            <body style="text-align: center">
+                <h2 style="color:white;  background-color:blue;"><b>Palindrome</b> </h2>
+                Enter The Number :<input type="text" name="n" id = "N"/>
+                <br><br><br><button onClick="Palindrome()">CHECK</button>
+                <div>
+                <script>
+                  function Palindrome()
+                    {
+                        var rem, temp, final = 0;
+                        var number= document.getElementById("N").value;
+                        temp = number;
+                        while(number>0)
+                        {
+                            rem = number%10;
+                            number =parseInt(number/10);          
+                            final = final*10+rem;
+                        }
+                        if(final==temp)
+                        {
+                          alert("The inputed number is Palindrome");
+                        }
+                        else
+                        {
+                           alert("The inputted number is  not palindrome");
+                        }
+                    }
+                
+
+
+                </script>
+                </div>
+            </body>
+
+</html>

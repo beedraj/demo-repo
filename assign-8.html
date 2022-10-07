@@ -1,0 +1,130 @@
+    <html>  
+    <head>  
+        <title>  
+        valid form 
+        </title>  
+            <meta name="viewport" content="width=device-width, initial-scale=1"> 
+            <style>
+                .K{
+                    background-color: rgb(204, 218, 213);
+                    height: 400px;
+                    width: 400px;
+                    border: 2px solid brown;
+                    padding: auto;
+                    margin: auto;border-radius: 15px;
+                    
+                }
+                form{
+                    padding-left:20px ;
+                }
+            </style> 
+      
+     </head>  
+    <body style="background-color: rgb(195, 193, 212);">  
+        <div class="k">
+            <h1 style="color: red; text-align:center">Forms</h1>
+        <form id="forms"  action="submit-form.html" >
+            <div>  
+                <label for="name" style="padding-right: 55px;">Name: </label>  
+                <input type="text" id="name" ></input> <span id="fn"  style="color: blue;"></span> 
+              </div><br>  
+              <div>  
+                <label for="phone">Phone number: </label>  
+                <input type="number" id="phone"  length="10"></input> <span id="phn" style="color: blue;" ></span> 
+              </div><br>  
+              <div>  
+                <label for="email" style="padding-right: 55px;">Email: </label>  
+                <input type="text" id="email" ></input> <span id="mail" style="color: blue; "></span> 
+              </div> <br> 
+              <div >
+                <label for="gender" style="padding-right: 55px;">Gender: </label>
+                <input  type="radio"  class="gender" name="male" >Male
+                <input  type="radio" class="gender"  name="male">Female
+                <span id="gen" style="color: blue;"></span>
+               </div><br>
+              <div>
+                <label for="state"style="padding-right: 55px;">State:</label>
+                <select id="state" >
+                    <option value="" > Please Select State</option>
+                    <option value="1">Panjab</option>
+                    <option value="2">Delhi</option>
+                    <option value="3">Chandigarh</option>
+                    <option value="4">UP</option>
+                </select>
+                <span id="st" style="color: blue;"></span>
+              </div><br>
+              <div>
+                <label for="graduation" >Graduation:</label><br>
+                <input type="checkbox" class="graduation">Diploma<br>
+                <input type="checkbox" class="graduation"> Bachelor<br>
+                <input type="checkbox" class="graduation"> Master<br>
+                <span id="sp"  style="color: blue;"></span>
+              </div><br>
+              <div style="text-align: center ;">  
+                <input type="submit"  style=" color:red" value="Submit" id="btn" />  
+              </div>  
+            
+        </form>
+    </div>
+        
+    </body>  
+    </html> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            let name= $("#name").val();
+            if( name == "")
+            {
+                $("#fn").text("please fill this");
+                return false;
+            }else{
+                $("#fn").css("display","none");
+            }
+            let phone= $("#phone").val();
+            if( phone == "" )
+            {
+                $("#phn").text("please fill this");
+                return false;
+            }else{
+                $("#phn").css("display","none");
+            }
+            let email= $("#email").val();
+            if( email == "")
+            {
+                $("#mail").text("please fill this");
+                return false;
+            }else{
+                $("#mail").css("display","none");
+            }
+            let gender= $(".gender").is(":checked");
+            if( gender == "")
+            {
+                $("#gen").text("please fill this");
+                return false;
+            }else{
+                $("#gen").css("display","none");
+            }
+            let state= $("#state").val();
+            if( state == "")
+            {
+                $("#st").text("please fill this");
+                return false;
+            }else{
+                $("#st").css("display","none");
+            }
+            let graduation= $(".graduation").is(":checked");
+            if( graduation == "")
+            {
+                $("#sp").text("please fill this");
+                return false;
+            }else{
+                $("#sp").css("display","none");
+            }
+           
+           
+           
+          
+        });
+      });
+    </script>
